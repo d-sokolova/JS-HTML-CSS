@@ -3,91 +3,68 @@
 <head lang="uk">
     <meta charset="UTF-8">
     <title>My List</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="main1.css"/>
 </head>
 
 <body>
-
-<div class="column">
-  <div class="row">
-    <table>
-      <td> 
-          <form class="example">
-          <input type="text" placeholder="Назва товару" name="search">
-          <button>Додати</button>
-          </form>
-      </td>
-   </table>
-
-   <table>
-      <td>Масло</td>
-      <td>
-        <div align="center">
-          <button class="bl-minus">-</button>
-          <button class="bl-label">3</button>
-          <button class="bl-plus">+</button>
-        </div>
-      </td>
-      <td> 
-        <div align="right">
-            <button class ="bl-buttons">Куплено</button>
-            <button class ="bl-button">x</button>
-        </div>
-      </td>
-      <tr>
-        <td>Яйця</td>
-        <td>
-          <div align="center">
-            <button class="bl-minus">-</button>
-            <button class="bl-label">3</button>
-            <button class="bl-plus">+</button>
-          </div>
-        </td>
-        <td>
-          <div align="right">
-            <button class ="bl-buttons">Куплено</button>
-            <button class ="bl-button">x</button>
-          </div>
-        </td>
-      </tr>
-        <tr>
-          <td>Хліб</td>
-          <td>
-            <div align="center">
-              <button class="bl-minus">-</button>
-              <button class="bl-label">3</button>
-              <button class="bl-plus">+</button>
+<div class="bl-main_background">
+    <div class="one-row-template" style="display: none;">
+        <div class="bl-row">
+            <div class="bl-product-name">Сир</div>
+            <input class="edit-name" type="text">
+            <div class="bl-count">
+                <button class="bl-minus"data-tooltip="Відняти продукт">-</button>
+                <span class="bl-quantity-label">1</span>
+                <button class="bl-plus"data-tooltip="Додати продукт">+</button>
             </div>
-          </td> 
-          <td>
-            <div align="right">
-              <button class ="bl-buttons">Куплено</button>
-              <button class ="bl-button">x</button>
+            <div class="bl-buttons">
+                <button class="bl-bought"data-tooltip="Купити продукт">Куплено</button>
+                <button class="bl-unbought">Не куплено</button>
+                <button class="bl-del"data-tooltip="Видалити продукт">x</button>
             </div>
-          </td>
-        </tr>
-    </table>
-  </div>
+        </div>
+    </div>
+    <div class="bl-container">
+        <div class=left-main-container>
+            <div class="left-container">
+                <div class="example">
+                    <input class="input-text" type="text" placeholder="Назва товару">
+                        <button class="button-add">Додати</button>
+                </div>
+                <div class="list-of-products"></div>
+            </div>
+        </div>
+        <div class=right-main-container>
+            <div class="right-container">
+                <div class="bl-title"><h3>Залишилося</h3></div>
+                <div class="bl-right-prod-list-left"></div>
+                <div class="bl-title"><h3>Куплено</h3></div>
+                <div class="bl-right-prod-list-bought"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <span class="one-product-template" style="display: none">
+        <span class="bought-product-in-right-col">
+                <span class="titleProduct">Помідори </span>
+                <span class="ui-circular-number"> 1</span>
+            </span>
+    </span>
 </div>
 
-<div class = "columnright">
-  <div class="row">
-    <table>
-      <th>Залишилося</th>
-      <tr>
-        <td>
-          <span class = "d1"> Масло <text class = "d2">3</text></span>
-          <span class = "d1"> Яйця <text class = "d2">2</text></span>
-          <span class = "d1"> Хліб <text class = "d2">1</text></span>
-        </td>
-      </tr>
-      <th>Куплено</th>      
-      <tr>
-        <td></td>
-      </tr>
-    </table>
-  </div>
+<div class="label">
+  <p>Buy List</p>
+  <span>created by:<p>Diana Sokolova</p></span>
 </div>
+<div class="labelprint">
+  <span>created by:
+    <p>Diana Sokolova</p>
+  </span>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
 
 </body>
 </html>
